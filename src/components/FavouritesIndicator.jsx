@@ -6,7 +6,6 @@ const FavouritesIndicator = () => {
 	const navigate = useNavigate();
 
 	const favouritesLength = useSelector((state) => state.favourites.content.length);
-	//favouritesLength rispecchierà in qualsiasi momento la lunghezza di state.cart.content
 
 	return (
 		<div className="text-end mt-3 mb-4">

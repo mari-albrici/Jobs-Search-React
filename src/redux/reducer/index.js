@@ -14,6 +14,14 @@ const mainReducer = (state = initialState, action) => {
 					content: [...state.favourites.content, action.payload],
 				},
 			};
+		case 'REMOVE_FROM_FAVOURITES':
+			return {
+				...state,
+				favourites: {
+					...state.favourites,
+					content: state.favourites.content.filter((_, i) => i !== action.payload),
+				},
+			};
 		default:
 			return state;
 	}
