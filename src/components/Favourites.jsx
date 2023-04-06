@@ -9,7 +9,7 @@ const Favourites = () => {
 
 	return (
 		<>
-			<Container>
+			<Container className="m-3">
 				<h2>Your favourite jobs:</h2>
 				<Row>
 					<Col>
