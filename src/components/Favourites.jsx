@@ -14,7 +14,7 @@ const Favourites = () => {
 				<Row>
 					<Col>
 						{favourites.length > 0 &&
-							favourites.map((favourite) => (
+							favourites.map((favourite, i) => (
 								<>
 									<ListGroup.Item key={favourite._id} className="d-flex justify-content-between">
 										<Container>
@@ -25,7 +25,7 @@ const Favourites = () => {
 											<Button
 												className="bg-danger border-danger"
 												onClick={() => {
-													dispatch({ type: 'REMOVE_FROM_FAVOURITES', payload: favourites });
+													dispatch({ type: 'REMOVE_FROM_FAVOURITES', payload: i });
 												}}
 											>
 												{' '}
