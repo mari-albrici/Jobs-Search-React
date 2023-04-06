@@ -18,7 +18,9 @@ const Favourites = () => {
 								<>
 									<ListGroup.Item key={favourite._id} className="d-flex justify-content-between">
 										<Container>
-											<h5>{favourite.company_name}</h5>
+											<Link to={`/${favourite.company_name}`}>
+												<h5>{favourite.company_name}</h5>
+											</Link>
 											<Link to={`/${favourite.url}`}>{favourite.title}</Link>
 										</Container>
 										<Container>
