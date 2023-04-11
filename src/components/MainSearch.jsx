@@ -3,7 +3,7 @@ import { Container, Row, Col, Form } from 'react-bootstrap';
 import Job from './Job';
 import FavouritesIndicator from './FavouritesIndicator';
 import { useDispatch, useSelector } from 'react-redux';
-import { getJobs } from '../redux/actions';
+import { getJobsAction } from '../redux/actions';
 
 const MainSearch = () => {
 	const dispatch = useDispatch();
@@ -22,7 +22,7 @@ const MainSearch = () => {
 					<FavouritesIndicator />
 				</Col>
 				<Col xs={10} className="mx-auto">
-					<Form onSubmit={getJobs(dispatch, query)}>
+					<Form onSubmit={getJobsAction(dispatch, query)}>
 						<Form.Control type="search" value={query} onChange={handleChange} placeholder="type and press Enter" />
 					</Form>
 				</Col>

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 const FavouritesIndicator = () => {
 	const navigate = useNavigate();
-	const favouritesLength = useSelector((state) => state.favourites.length);
+	const favouritesLength = useSelector((state) => state.favourites.content.length);
 
 	return (
 		<div className="text-end mt-3 mb-4">

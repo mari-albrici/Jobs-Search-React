@@ -7,10 +7,16 @@ const Favourites = () => {
 	const favourites = useSelector((state) => state.favourites.content);
 	const dispatch = useDispatch();
 
+	console.log(favourites);
+
 	return (
 		<>
 			<Container className="m-3">
-				<h2>Your favourite jobs:</h2>
+				<Container className="d-flex justify-content-between">
+					<h2>Your favourite jobs:</h2>
+					<Link to={`/`}>HOME</Link>
+				</Container>
+
 				<Row>
 					<Col>
 						{favourites.length > 0 &&

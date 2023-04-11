@@ -20,7 +20,7 @@ const Job = ({ data }) => {
 				<Button
 					className="bg-light border-info text-info"
 					onClick={() => {
-						dispatch({ type: ADD_TO_FAVOURITES, payload: data.title });
+						dispatch({ type: ADD_TO_FAVOURITES, payload: data });
 					}}
 				>
 					Add to favourites

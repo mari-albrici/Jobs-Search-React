@@ -9,12 +9,12 @@ const mainReducer = (state = initialState, action) => {
 		case ADD_TO_FAVOURITES:
 			return {
 				...state,
-				content: [action.payload],
+				content: [...state.content, action.payload],
 			};
 		case REMOVE_FROM_FAVOURITES:
 			return {
 				...state,
-				content: state.filter((_, i) => i !== action.payload),
+				content: state.content.filter((_, i) => i !== action.payload),
 			};
 		default:
 			return state;
