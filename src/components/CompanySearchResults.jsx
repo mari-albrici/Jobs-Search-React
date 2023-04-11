@@ -12,7 +12,9 @@ const CompanySearchResults = () => {
 
 	useEffect(() => {
 		dispatch(getCompanyAction(params.companyName));
-	});
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
+
 	return (
 		<Container>
 			<Row>

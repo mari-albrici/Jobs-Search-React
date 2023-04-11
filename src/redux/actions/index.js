@@ -23,9 +23,7 @@ export const getJobsAction = (dispatch, query) => {
 export const ADD_TO_COMPANY_JOBS = 'ADD_TO_COMPANY_JOBS';
 
 export const getCompanyAction = (companyName) => {
-	return async (dispatch, e) => {
-		e.preventDefault();
-
+	return async (dispatch) => {
 		try {
 			const response = await fetch('https://strive-benchmark.herokuapp.com/api/jobs?company=' + companyName);
 			if (response.ok) {

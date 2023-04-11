@@ -6,7 +6,7 @@ import jobsReducer from '../reducer/jobs';
 const rootReducer = combineReducers({
 	favourites: mainReducer,
 	jobs: jobsReducer,
-	companyjobs: companyReducer,
+	companyJobs: companyReducer,
 });
 
 const store = configureStore({
