@@ -1,26 +1,20 @@
+import { ADD_TO_FAVOURITES, REMOVE_FROM_FAVOURITES } from '../actions';
+
 const initialState = {
-	favourites: {
-		content: [],
-	},
+	content: [],
 };
 
 const mainReducer = (state = initialState, action) => {
 	switch (action.type) {
-		case 'ADD_TO_FAVOURITES':
+		case ADD_TO_FAVOURITES:
 			return {
 				...state,
-				favourites: {
-					...state.favourites,
-					content: [...state.favourites.content, action.payload],
-				},
+				content: [action.payload],
 			};
-		case 'REMOVE_FROM_FAVOURITES':
+		case REMOVE_FROM_FAVOURITES:
 			return {
 				...state,
-				favourites: {
-					...state.favourites,
-					content: state.favourites.content.filter((_, i) => i !== action.payload),
-				},
+				content: state.filter((_, i) => i !== action.payload),
 			};
 		default:
 			return state;

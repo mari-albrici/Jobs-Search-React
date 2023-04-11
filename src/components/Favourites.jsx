@@ -1,10 +1,10 @@
 import { Col, Row, ListGroup, Container, Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { REMOVE_FROM_FAVOURITES } from '../redux/actions';
 
 const Favourites = () => {
 	const favourites = useSelector((state) => state.favourites.content);
-	console.log(favourites);
 	const dispatch = useDispatch();
 
 	return (
@@ -27,7 +27,7 @@ const Favourites = () => {
 											<Button
 												className="bg-danger border-danger"
 												onClick={() => {
-													dispatch({ type: 'REMOVE_FROM_FAVOURITES', payload: i });
+													dispatch({ type: REMOVE_FROM_FAVOURITES, payload: i });
 												}}
 											>
 												{' '}
